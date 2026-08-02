@@ -9,7 +9,7 @@ export function SiteFooter() {
     <footer className="bg-hero-deep py-14 text-hero-foreground">
       <div className="mx-auto grid max-w-[1400px] gap-10 px-6 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,1fr))] lg:px-10">
         <div>
-          <p className="font-display text-3xl font-extrabold">kumo</p>
+          <p className="font-display text-3xl font-extrabold">Momo</p>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-hero-foreground/60">
             Single-origin Japanese matcha, milled slow and shipped fresh.
           </p>
@@ -35,7 +35,7 @@ export function SiteFooter() {
         ))}
       </div>
       <div className="mx-auto mt-12 max-w-[1400px] border-t border-hero-foreground/10 px-6 pt-6 text-xs text-hero-foreground/45 lg:px-10">
-        © {new Date().getFullYear()} kumo matcha. Uji, Japan.
+        © {new Date().getFullYear()} Momo matcha.Kigali,Rwanda.
       </div>
     </footer>
   );
