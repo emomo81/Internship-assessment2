@@ -8,7 +8,7 @@ export function SiteHeader() {
     <header className="absolute inset-x-0 top-0 z-40">
       <div className="mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-6 lg:grid-cols-[1fr_auto_1fr] lg:px-10">
         <Link to="/" className="font-display text-3xl font-extrabold tracking-tight text-hero-foreground">
-          kumo
+          Momo
         </Link>
 
         <nav className="hidden items-center gap-9 lg:flex">
