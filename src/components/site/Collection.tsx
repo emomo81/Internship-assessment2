@@ -1,36 +1,32 @@
 import { ArrowRight, Plus } from "lucide-react";
-import ceremonial from "@/assets/p-ceremonial.jpg.asset.json";
-import premium from "@/assets/p-premium.jpg.asset.json";
-import latte from "@/assets/p-latte.jpg.asset.json";
-import cooking from "@/assets/p-cooking.jpg.asset.json";
 
 const PRODUCTS = [
   {
     name: "Ceremonial Grade",
     copy: "Finest quality for traditional tea ceremony.",
     price: "$29.00",
-    image: ceremonial.url,
+    image: "/images/p-ceremonial.jpg",
     tag: null as string | null,
   },
   {
     name: "Premium Matcha",
     copy: "Perfect balance for daily drinking.",
     price: "$19.00",
-    image: premium.url,
+    image: "/images/p-premium.jpg",
     tag: "Popular",
   },
   {
     name: "Matcha Latte Mix",
     copy: "Easy to make, perfect for busy days.",
     price: "$15.00",
-    image: latte.url,
+    image: "/images/p-latte.jpg",
     tag: null,
   },
   {
     name: "Cooking Grade",
     copy: "Ideal for baking and smoothies.",
     price: "$12.00",
-    image: cooking.url,
+    image: "/images/p-cooking.jpg",
     tag: null,
   },
 ];
