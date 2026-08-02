@@ -1,13 +1,10 @@
-import story from "@/assets/story.jpg.asset.json";
-import ritual from "@/assets/ritual.jpg.asset.json";
-
 export function Story() {
   return (
     <section id="story" className="relative overflow-hidden bg-hero-deep py-20 text-hero-foreground lg:py-28">
       <div className="mx-auto grid max-w-[1400px] items-center gap-12 px-6 lg:grid-cols-2 lg:px-10">
         <div className="relative">
           <img
-            src={story.url}
+            src="/images/story.jpg"
             alt="Misty terraced tea fields in Uji, Japan at dawn"
             loading="lazy"
             width={1400}
@@ -15,7 +12,7 @@ export function Story() {
             className="w-full rounded-[2rem] object-cover"
           />
           <img
-            src={ritual.url}
+            src="/images/ritual.jpg"
             alt="Bamboo whisk and scoop beside a bowl of whisked matcha"
             loading="lazy"
             width={900}
