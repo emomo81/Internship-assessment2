@@ -8,7 +8,7 @@ import { Reviews } from "@/components/site/Reviews";
 import { Newsletter } from "@/components/site/Newsletter";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
-const TITLE = "kumo — Choose Your Perfect Matcha";
+const TITLE = "Momo — Choose Your Perfect Matcha";
 const DESCRIPTION =
   "Pure organic matcha from Uji, Japan. Drop a fruit into the cup and watch the drink change — then shop ceremonial, premium, latte and cooking grades.";
 
