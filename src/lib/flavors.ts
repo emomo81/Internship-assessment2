@@ -1,8 +1,3 @@
-import strawberry from "@/assets/strawberry.png.asset.json";
-import raspberry from "@/assets/raspberry.png.asset.json";
-import blueberry from "@/assets/blueberry.png.asset.json";
-import cherry from "@/assets/cherry.png.asset.json";
-
 export type FlavorId = "matcha" | "strawberry" | "raspberry" | "blueberry" | "cherry";
 
 export type Flavor = {
@@ -43,7 +38,7 @@ export const FRUITS: Flavor[] = [
     liquid: "oklch(0.68 0.2 18)",
     glow: "oklch(0.78 0.19 20)",
     wash: "oklch(0.36 0.09 20)",
-    image: strawberry.url,
+    image: "/images/strawberry.png",
     slot: { left: "22%", top: "26%", size: "132px", delay: "0s" },
   },
   {
@@ -55,7 +50,7 @@ export const FRUITS: Flavor[] = [
     liquid: "oklch(0.6 0.22 3)",
     glow: "oklch(0.72 0.2 5)",
     wash: "oklch(0.34 0.1 355)",
-    image: raspberry.url,
+    image: "/images/raspberry.png",
     slot: { left: "12%", top: "56%", size: "124px", delay: "-1.8s" },
   },
   {
@@ -67,7 +62,7 @@ export const FRUITS: Flavor[] = [
     liquid: "oklch(0.5 0.17 285)",
     glow: "oklch(0.66 0.17 288)",
     wash: "oklch(0.32 0.08 288)",
-    image: blueberry.url,
+    image: "/images/blueberry.png",
     slot: { left: "80%", top: "28%", size: "128px", delay: "-3.4s" },
   },
   {
@@ -79,7 +74,7 @@ export const FRUITS: Flavor[] = [
     liquid: "oklch(0.5 0.21 26)",
     glow: "oklch(0.64 0.21 28)",
     wash: "oklch(0.33 0.1 28)",
-    image: cherry.url,
+    image: "/images/cherry.png",
     slot: { left: "89%", top: "58%", size: "136px", delay: "-5.1s" },
   },
 ];
