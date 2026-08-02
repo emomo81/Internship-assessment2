@@ -1,8 +1,7 @@
 import { forwardRef } from "react";
-import cupAsset from "@/assets/cup.png.asset.json";
 import type { Flavor } from "@/lib/flavors";
 
-const CUP_SRC = `url("${cupAsset.url}")`;
+const CUP_SRC = `url("/images/cup.png")`;
 
 /** Mask that limits an overlay to the liquid area of the cup artwork. */
 const liquidMask = {
@@ -35,7 +34,7 @@ export const MatchaCup = forwardRef<HTMLDivElement, Props>(function MatchaCup(
       />
 
       <img
-        src={cupAsset.url}
+        src="/images/cup.png"
         alt={`${flavor.name} in a tall cup`}
         width={912}
         height={1312}
