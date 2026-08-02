@@ -1,0 +1,206 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-hero: var(--hero);
+  --color-hero-deep: var(--hero-deep);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-matcha: var(--matcha);
+  --color-matcha-light: var(--matcha-light);
+  --color-sand: var(--sand);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-flavor: var(--flavor);
+}
+
+:root {
+  --radius: 1.25rem;
+
+  /* Page surfaces */
+  --cream: oklch(0.962 0.018 96);
+  --sand: oklch(0.902 0.043 108);
+  --ink: oklch(0.24 0.03 120);
+
+  /* Hero */
+  --hero: oklch(0.335 0.052 133);
+  --hero-deep: oklch(0.245 0.045 136);
+  --hero-foreground: oklch(0.965 0.02 100);
+
+  /* Matcha accents */
+  --matcha: oklch(0.62 0.13 128);
+  --matcha-light: oklch(0.86 0.13 122);
+
+  /* Active flavor (mutated at runtime) */
+  --flavor: oklch(0.7 0.15 130);
+  --flavor-soft: oklch(0.82 0.1 130);
+
+  --background: var(--cream);
+  --foreground: var(--ink);
+  --card: oklch(0.985 0.01 96);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.985 0.01 96);
+  --popover-foreground: var(--ink);
+  --primary: oklch(0.86 0.13 122);
+  --primary-foreground: oklch(0.26 0.05 135);
+  --secondary: oklch(0.93 0.03 105);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.93 0.025 100);
+  --muted-foreground: oklch(0.48 0.03 120);
+  --accent: oklch(0.9 0.05 118);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.01 100);
+  --border: oklch(0.88 0.03 104);
+  --input: oklch(0.88 0.03 104);
+  --ring: oklch(0.62 0.13 128);
+}
+
+.dark {
+  --background: oklch(0.19 0.03 132);
+  --foreground: oklch(0.96 0.02 100);
+  --card: oklch(0.24 0.035 134);
+  --card-foreground: oklch(0.96 0.02 100);
+  --popover: oklch(0.24 0.035 134);
+  --popover-foreground: oklch(0.96 0.02 100);
+  --primary: oklch(0.86 0.13 122);
+  --primary-foreground: oklch(0.24 0.05 135);
+  --secondary: oklch(0.28 0.04 134);
+  --secondary-foreground: oklch(0.96 0.02 100);
+  --muted: oklch(0.28 0.04 134);
+  --muted-foreground: oklch(0.72 0.03 110);
+  --accent: oklch(0.31 0.05 132);
+  --accent-foreground: oklch(0.96 0.02 100);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.62 0.13 128);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+  }
+}
+
+/* --- Hero cup effects ------------------------------------------------ */
+
+@utility cup-mask {
+  -webkit-mask-image: var(--cup-src);
+  mask-image: var(--cup-src);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+@utility liquid-wave {
+  background-image: repeating-linear-gradient(
+    100deg,
+    transparent 0 22px,
+    color-mix(in oklab, white 22%, transparent) 22px 46px,
+    transparent 46px 80px
+  );
+  animation: liquid-drift 7s linear infinite;
+}
+
+@keyframes liquid-drift {
+  to {
+    background-position: 320px 0;
+  }
+}
+
+@utility float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(2deg);
+  }
+}
+
+@utility spin-seal {
+  animation: spin-seal 22s linear infinite;
+}
+
+@keyframes spin-seal {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@utility grain-noise {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    color-mix(in oklab, white 40%, transparent) 1px,
+    transparent 0
+  );
+  background-size: 26px 26px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
