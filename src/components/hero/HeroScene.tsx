@@ -133,9 +133,7 @@ export function HeroScene() {
           <div className="relative grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-center">
             {/* Copy */}
             <div ref={copyRef} className="relative z-20 max-w-xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-hero-foreground/25 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-hero-foreground/85">
-                <Leaf className="h-3.5 w-3.5" /> 100% Organic
-              </span>
+
 
               <h1 className="mt-6 font-display text-[clamp(2.9rem,7vw,5.2rem)] font-extrabold leading-[0.92] text-hero-foreground">
                 Choose your
